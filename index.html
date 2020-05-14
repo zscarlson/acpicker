@@ -210,14 +210,13 @@ button.disabled:hover {
 
 <p>zach make funny tool to find favorite villagers :)</p>
 
-
-
 <p>Include Animals:
 <label><input type="checkbox" name="animals" class="animals" value="alligator"> Alligator</label>
+<label><input type="checkbox" name="animals" class="animals" value="anteater"> Anteater</label>
+<label><input type="checkbox" name="animals" class="animals" value="bear"> Bear</label>
 <label><input type="checkbox" name="animals" class="animals" value="frog"> Frog</label>
 <label><input type="checkbox" name="animals" class="animals" value="octopus"> Octopus</label>
 <label><input type="checkbox" name="animals" class="animals" value="sheep"> Sheep</label>
-
 </p>
 
 
@@ -230,7 +229,6 @@ button.disabled:hover {
 <label><input type="checkbox" name="types" class="types" value="peppy"> Peppy</label>
 <label><input type="checkbox" name="types" class="types" value="snooty"> Snooty</label>
 <label><input type="checkbox" name="types" class="types" value="uchi"> Uchi</label>
-
 </p>
 
 
@@ -270,7 +268,7 @@ var items = [
     {id: 'Camofrog', name: 'Camofrog', image: 'Camofrog.png', animal: 'frog', type: 'cranky'},
     {id: 'Cousteau', name: 'Cousteau', image: 'Cousteau.png', animal: 'frog', type: 'jock'},
     {id: 'Croque', name: 'Croque', image: 'Croque.png', animal: 'frog', type: 'cranky'},
-    {id: 'Diva', name: 'Diva', image: 'Diva.png', animal: 'frog', type: 'sisterly'},
+    {id: 'Diva', name: 'Diva', image: 'Diva.png', animal: 'frog', type: 'uchi'},
     {id: 'Drift', name: 'Drift', image: 'Drift.png', animal: 'frog', type: 'jock'},
     {id: 'Frobert', name: 'Frobert', image: 'Frobert.png', animal: 'frog', type: 'jock'},
     {id: 'Gigi', name: 'Gigi', image: 'Gigi.png', animal: 'frog', type: 'normal'},
@@ -300,16 +298,40 @@ var items = [
     {id: 'Wendy', name: 'Wendy', image: 'Wendy.png', animal: 'sheep', type: 'peppy'},
     {id: 'Willow', name: 'Willow', image: 'Willow.png', animal: 'sheep', type: 'snooty'},
 
+    {id: 'Antonio', name: 'Antonio', image: 'Antonio.png', animal: 'anteater', type: 'jock'},
+    {id: 'Annalisa', name: 'Annalisa', image: 'Annalisa.png', animal: 'anteater', type: 'normal'},
+    {id: 'Cyrano', name: 'Cyrano', image: 'Cyrano.png', animal: 'anteater', type: 'cranky'},
+    {id: 'Anabelle', name: 'Anabelle', image: 'Anabelle.png', animal: 'anteater', type: 'peppy'},
+    {id: 'Pango', name: 'Pango', image: 'Pango.png', animal: 'anteater', type: 'peppy'},
+    {id: 'Olaf', name: 'Olaf', image: 'Olaf.png', animal: 'anteater', type: 'smug'},
+    {id: 'Snooty', name: 'Snooty', image: 'Snooty.png', animal: 'anteater', type: 'snooty'},
+
     {id: 'Zucker', name: 'Zucker', image: 'Zucker.png', animal: 'octopus', type: 'lazy'},
     {id: 'Marina', name: 'Marina', image: 'Marina.png', animal: 'octopus', type: 'normal'},
-    {id: 'Octavian', name: 'Octavian', image: 'Octavian.png', animal: 'octopus', type: 'cranky'}
+    {id: 'Octavian', name: 'Octavian', image: 'Octavian.png', animal: 'octopus', type: 'cranky'},
+
+    {id: 'Grizzly', name: 'Grizzly', image: 'Grizzly.png', animal: 'bear', type: 'cranky'},
+    {id: 'Groucho', name: 'Groucho', image: 'Groucho.png', animal: 'bear', type: 'cranky'},
+    {id: 'Ike', name: 'Ike', image: 'Ike.png', animal: 'bear', type: 'cranky'},
+    {id: 'Curt', name: 'Curt', image: 'Curt.png', animal: 'bear', type: 'cranky'},
+    {id: 'Beardo', name: 'Beardo', image: 'Beardo.png', animal: 'bear', type: 'smug'},
+    {id: 'Charlise', name: 'Charlise', image: 'Charlise.png', animal: 'bear', type: 'uchi'},
+    {id: 'Chow', name: 'Chow', image: 'Chow.png', animal: 'bear', type: 'cranky'},
+    {id: 'Nate', name: 'Nate', image: 'Nate.png', animal: 'bear', type: 'lazy'},
+    {id: 'Paula', name: 'Paula', image: 'Paula.png', animal: 'bear', type: 'uchi'},
+    {id: 'Pinky', name: 'Pinky', image: 'Pinky.png', animal: 'bear', type: 'peppy'},
+    {id: 'Klaus', name: 'Klaus', image: 'Klaus.png', animal: 'bear', type: 'smug'},
+    {id: 'Megan', name: 'Megan', image: 'Megan.png', animal: 'bear', type: 'normal'},
+    {id: 'Teddy', name: 'Teddy', image: 'Teddy.png', animal: 'bear', type: 'jock'},
+    {id: 'Tutu', name: 'Tutu', image: 'Tutu.png', animal: 'bear', type: 'peppy'},
+    {id: 'Ursala', name: 'Ursala', image: 'Ursala.png', animal: 'bear', type: 'uchi'}
 ];
 
 var myPicker = new picker.Picker({
     items: items,
     localStorageKey: 'picker-state',
     defaultSettings: {
-        animals: ['octopus', 'sheep', 'alligator', 'frog'],
+        animals: ['octopus', 'sheep', 'alligator', 'frog', 'anteater', 'bear'],
         types: ['cranky', 'jock', 'lazy', 'smug', 'normal', 'peppy', 'snooty', 'uchi'],
     },
     shouldIncludeItem: function(item, settings) {
