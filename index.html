@@ -240,7 +240,7 @@ button.disabled:hover {
 <ul id="evaluating" class="item-list">
 </ul>
 
-<p id="buttons"><button id="pick">Pick</button> <button id="pass">Pass</button> <button id="undo">Undo</button> <button id="redo">Redo</button></p>
+<p id="buttons"><button id="pick">Pick</button> <button id="pass">Pass</button> <button id="undo">Undo</button> <button id="redo">Redo</button> <button id="reset">Reset</button></p>
 </div>
 
 <div id="secondary">
@@ -311,13 +311,12 @@ var myPicker = new picker.Picker({
     defaultSettings: {
         animals: ['octopus', 'sheep', 'alligator', 'frog'],
         types: ['cranky', 'jock', 'lazy', 'smug', 'normal', 'peppy', 'snooty', 'uchi'],
-        recurringOnly: true
     },
     shouldIncludeItem: function(item, settings) {
         // Include only if:
         // 1. the character's role is in the list of roles we've checked, and
         // 2. we haven't checked the "recurring only" box, or the character is a recurring character.
-        return settings.animals.indexOf(item.animal) !== -1 && settings.types.indexOf(item.type) !== -1 && (!settings.recurringOnly || item.recurring);
+        return settings.animals.indexOf(item.animal) !== -1 && settings.types.indexOf(item.type) !== -1;
     }
 });
 
@@ -327,6 +326,7 @@ var pickerUI = new PickerUI(myPicker, {
         pass: "#pass",
         undo: "#undo",
         redo: "#redo",
+        reset: "#reset",
         evaluating: "#evaluating",
         favorites: "#favorites",
         settings: {

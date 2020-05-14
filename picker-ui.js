@@ -21,7 +21,6 @@
             reset: "Reset",
             mustSelect: "You must select something first! If you're indifferent, press Pass.",
             orderedAll: "You have ordered every available item!",
-            noItems: "There are no items that fit your criteria! Set some different options and try again.",
             resetWarning: "Are you sure you wish to reset your state? All your found favorites and current progress will be lost."
         }, this.options.messages);
 
